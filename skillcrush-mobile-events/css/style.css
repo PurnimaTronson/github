@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, html{
+	font-family: 'Montserrat', sans-serif;
+	color:#a3d3c6;
+	}
+	
+.clear{
+	
+	clear: both;
+	}	
+	
+	
+h1{
+	
+	padding: 10px;
+	border: 1px solid;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	
+	}	
+	
+.container{
+	
+	max-width: 600px;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	margin-top: 50px;
+	
+	
+	}
+	
+.character-container, .character{
+	
+	width: 350px;
+	height: 350px;
+	margin: auto;
+	}
+	
+.character{
+	background: url(../img/stand.png) no-repeat center center;
+	
+	}
+	
+.jump{
+	background: url(../img/jump.png);
+	}
+
+
+.swipe-left{
+	background: url(../img/left.png);
+	}
+
+
+.swipe-right{
+	background: url(../img/right.png);
+	}

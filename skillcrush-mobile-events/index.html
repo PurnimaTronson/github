@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mobile Events</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+        <div class="character-container">
+        
+        <div class="character"></div>
+        
+        </div>
+		
+        <h1>Instructions</h1>
+        <p>Swipe Left = Walking Left</p>
+        <p>Swipe Right = Walking Right</p>
+        <p>Tap = Jump!</p>
+
+
+
+</div><!--container end-->
+
+
+
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script>
+$(function(){
+  $( "div.character" ).bind( "tap", tapHandler );
+ 
+  function tapHandler( event ){
+	$( event.target ).removeClass("walk-right walk-left");
+    $( event.target ).addClass( "jump" );
+  }
+});
+</script>
+
+<script>
+$(function(){
+  // Bind the swipeleftHandler callback function to the swipe event on div.box
+  $( "div.character" ).on( "swipeleft", swipeleftHandler );
+ 
+  // Callback function references the event target and adds the 'swipeleft' class to it
+  function swipeleftHandler( event ){
+	$( event.target ).removeClass("swipe-right jump"); 
+    $( event.target ).addClass( "swipeleft" );
+  }
+});
+</script>
+
+<script>
+$(function(){
+    // Bind the swiperightHandler callback function to the swipe event on div.box
+  $( "div.character" ).on( "swiperight", swiperightHandler );
+ 
+  // Callback function references the event target and adds the 'swiperight' class to it
+  function swiperightHandler( event ){
+	  $( event.target ).removeClass("swipe-left jump"); 
+    $( event.target ).addClass( "swiperight" );
+  }
+});
+</script>
+
+</body>
+</html>
